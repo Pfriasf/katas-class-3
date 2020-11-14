@@ -7,11 +7,15 @@ console.log(sum(3, 2, 2));
 
 // Create a function that receives a string and returns if the length of that string is even or odd
 
-function checkEveOrOdd(string) {
-  if (string.length % 2 === 0) {
-    console.log("Its even");
+function checkEveOrOdd(someString) {
+  if (typeof someString != "string") {
+    console.log("Only strings alowed");
   } else {
-    console.log("It is odd");
+    if (someString.length % 2 === 0) {
+      console.log(`${someString} have ${someString.length} letters, its even`);
+    } else {
+      console.log(`${someString} have ${someString.length} letters, its odd`);
+    }
   }
 }
 
